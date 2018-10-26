@@ -10,7 +10,7 @@ class message():
         self.bot = bot
 
     async def on_message(self, message):
-        if ' op' in message.content:
+        if 'op ' in message.content:
             await self.bot.send_message(message.channel, " Nerf please ")
             
         if not message.author.bot and (message.server == None or self.bot.user in message.mentions):
