@@ -52,6 +52,7 @@ async def say(ctx, *args):
       await bot.say(mesg)
       print (ctx.message.author.id + " or " + ctx.message.author.name + " made me say'{}'".format(mesg))
 
+  @bot.command(pass_context=True)
   const Discord = require("discord.js");
   const client = new Discord.client();
   
