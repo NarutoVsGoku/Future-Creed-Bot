@@ -1,5 +1,7 @@
 import discord
-startup_extensions = ['cogs.message','cogs.owner']
+startup_extensions = [
+'cogs.message','cogs.owner'
+]
 from discord.ext import commands
 
 OK = 0x89f442
