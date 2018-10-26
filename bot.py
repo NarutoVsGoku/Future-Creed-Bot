@@ -6,6 +6,10 @@ import os
 import random
 import youtube_dl
 
+startup_extensions = [
+  'message'
+]
+
 bot = commands.Bot(command_prefix='>')
 ownerID = "405266248314781696"
 
