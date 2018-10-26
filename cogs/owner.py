@@ -52,7 +52,6 @@ class manage():
                    noperm.add_field(name='Error', value='Are you sure you have enough permission to unload' + extension_name, inline=True)
                    await self.bot.say(embed=noperm)
                    
-
         @commands.command(pass_context=True)
         async def pfp(self, ctx, args : str):
              if ctx.message.author.id in ownerID:
