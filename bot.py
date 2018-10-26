@@ -24,7 +24,7 @@ async def on_ready():
 async def say(ctx, *args):
   """Makeme say your message"""
   if ctx.message.author.id in ownerID:
-     channel = ctx.message.channel
+      channel = ctx.message.channel
       mesg = ' '.join(args)
       await bot.delete_message(ctx.message)
       await bot.send_typing(ctx.message)
