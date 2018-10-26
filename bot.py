@@ -6,7 +6,7 @@ import os
 import random
 import youtube_dl
 
-bot = commands.Bot(command_prefix='*')
+bot = commands.Bot(command_prefix='>')
 ownerID = "405266248314781696"
 
 # To remove the help command and make your own help command
@@ -19,6 +19,26 @@ async def on_ready():
   print ("With the ID: " + bot.user.id)
   print ("Using discord.py v" + discord.__version__)
   print ("------")
+
+@bot.command(pass_context=True)
+async def say(ctx, *args):
+  """Makeme say your message"""
+  if ctx.message.author.id in ownerID:
+     channel = ctx.message.channel
+      mesg = ' '.join(args)
+      await bot.delete_message(ctx.message)
+      await bot.send_typing(ctx.message)
+      await asyncio.sleep(1)
+      await bot.say(mesg)
+      print (ctx.message.author.id + " or " +ctx.message.author.name + " made me say'{}'".format(mesg))
+  else:
+      channel = ctx.message.channel
+      mesg = ' '.join(args)
+      await bot.delete_message(ctx.message)
+      await bot.say(mesg)
+      await asyncio.sleep(1)
+      await bot.say(mesg)
+      print (ctx.message.author.id + " or " + ctx.message.author.name + " made me say'{}'".format(mesg))
 
   
   
@@ -42,27 +62,3 @@ async def on_ready():
   
   
 bot.run(os.environ.get('Token'))
-
-@bot.command(pass_context=True)
-async def say(ctx, *args):
-  """Makeme say your message"""
-  if ctx.message.author.id in ownerID:
-     channel = ctx.message.channel
-      mesg = ' '.join(args)
-      await bot.delete_message(ctx.message)
-      await bot.send_typing(ctx.message)
-      await asyncio.sleep(1)
-      await bot.say(mesg)
-      print (ctx.message.author.id + " or " +
-ctx.message.author.name + " made me say
-'{}'".format(mesg))
-     else:
-          channel = ctx.message.channel
-          mesg = ' '.join(args)
-          await bot.delete_message(ctx.message)
-          await bot.say(mesg)
-          await asyncio.sleep(1)
-          await bot.say(mesg)
-          print (ctx.message.author.id + " or " +
-ctx.message.author.name + " made me say
-'{}'".format(mesg))
