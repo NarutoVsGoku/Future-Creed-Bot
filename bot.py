@@ -31,6 +31,18 @@ async def on_ready():
   print ("With the ID: " + bot.user.id)
   print ("Using discord.py v" + discord.__version__)
   print ("------")
+  
+@bot.event
+async def on_member_join(member):
+    server = member.server
+    fmt = 'Welcome {0.mention} to {1.name}!'
+    await bot.send_message(server, fmt.format(member, server))
+    
+@bot.event
+async def on_member_leave(member):
+    server = member.server
+    fmt = '{0.mention} left {1.name}...'
+    await bot.send_message(server, fmt.format(member, server))
 
 @bot.command(pass_context=True)
 async def say(ctx, *args):
