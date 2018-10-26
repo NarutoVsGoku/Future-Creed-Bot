@@ -10,6 +10,9 @@ startup_extensions = [
   'cogs.message'
 ]
 
+bot = commands.Bot(command_prefix='f!')
+ownerID = "405266248314781696"
+
 if __name__ == "__main__":
     for extension in startup_extensions:
         try:
@@ -17,10 +20,7 @@ if __name__ == "__main__":
         except Exception as e:
             exc = '{}: {}'.format(type(e).__name__, e)
             print('Failed to load extension {}\n{}'.format(extension, exc))
-
-bot = commands.Bot(command_prefix='f!')
-ownerID = "405266248314781696"
-
+            
 # To remove the help command and make your own help command
 #bot.remove_command('help')
 
