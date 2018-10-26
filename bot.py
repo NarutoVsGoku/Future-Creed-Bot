@@ -35,7 +35,7 @@ async def say(ctx, *args):
       channel = ctx.message.channel
       mesg = ' '.join(args)
       await bot.delete_message(ctx.message)
-      await bot.say(mesg)
+      await bot.send_typing(ctx.message)
       await asyncio.sleep(1)
       await bot.say(mesg)
       print (ctx.message.author.id + " or " + ctx.message.author.name + " made me say'{}'".format(mesg))
