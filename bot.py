@@ -42,27 +42,3 @@ async def on_ready():
   
   
 bot.run(os.environ.get('Token'))
-
-@bot.command(pass_context=true)
-async def say(ctx, *args):
-  """Make me say your message""
-  if ctx.message.author.id in ownerID:
-  channel = ctx.message.channel
-  mesg = ' '.join(args)
-  await bot.delete_message(ctx.message)
-  await bot.send_typing(channel)
-  await asyncio.sleep(1)
-  await bot.say(mesg)
-  print (ctx.message.author.id + " or " +
-ctx.message.author.name + "mademe say
-'{}'".format(mesg))
-    else:
-    channel = ctx.message.channel
-    mesg = ' '.join(args)
-    await bot.delete_message(ctx.message)
-    await bot.send_typing(channel)
-    await asyncio.sleep(1)
-    await bot.say(mesg)
-    print (ctx.message.author.id + " or " +
-ctx.message.author.name + " made me say
-'{}'".format(mesg))
