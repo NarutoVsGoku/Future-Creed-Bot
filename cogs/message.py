@@ -5,10 +5,10 @@ import json
 bot = commands.Bot(command_prefix='f!')
 user = 'rZuTJlFKDZF5oi0T'
 key = 'jiaN5JDdXrvjRNFng4t9rlMF47pjazst'
+self.bot = bot
 
 class message():
     def __init__(self, bot):
-        self.bot = bot
 
     async def on_message(self, message):
         if 'pervert' in message.content:
