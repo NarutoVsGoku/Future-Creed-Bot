@@ -67,4 +67,4 @@ class manage():
 
 
     def setup(bot):
-        bot.add_cog(manage(bot)
+        bot.add_cog(manage(bot))
