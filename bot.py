@@ -6,7 +6,7 @@ import os
 import random
 import youtube_dl
 
-bot = commands.Bot(command_prefix='>')
+bot = commands.Bot(command_prefix='*')
 ownerID = "405266248314781696"
 
 # To remove the help command and make your own help command
@@ -42,6 +42,7 @@ async def on_ready():
   
   
 bot.run(os.environ.get('Token'))
+
 @bot.command(pass_context=True)
 async def say(ctx, *args):
   """Makeme say your message"""
