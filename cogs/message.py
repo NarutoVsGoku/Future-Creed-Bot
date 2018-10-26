@@ -11,7 +11,7 @@ class message():
 
     async def on_message(self, message):
         if 'pervert' in message.content:
-            await self.bot.send_message(message.channel, " *attempts to kill the perv* ")
+            await self.bot.send_message(message.channel, " *assassinates the perv* ")
             
         if not message.author.bot and (message.server == None or self.bot.user in message.mentions):
             await self.bot.send_typing(message.channel)
