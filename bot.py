@@ -10,7 +10,7 @@ startup_extensions = [
   'cogs.message'
 ]
 
-bot = commands.Bot(command_prefix='*')
+bot = commands.Bot(command_prefix='f!')
 ownerID = "405266248314781696"
 
 # To remove the help command and make your own help command
