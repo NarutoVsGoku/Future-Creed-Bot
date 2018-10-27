@@ -45,7 +45,7 @@ class manage():
                 else:
                      self.bot.unload_extension(extension_name)
                      embed = discord.Embed(title=None, description=None, color=OK)
-                     embed.add_field(name=extension_name, value="Cog unloaded."
+                     embed.add_field(name=extension_name, value="Cog unloaded.")
                      await self.bot.say(embed=embed)
              else:
                  noperm = discord.Embed(title=None, description=None, color=Error)
