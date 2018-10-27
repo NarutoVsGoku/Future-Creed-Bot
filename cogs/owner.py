@@ -3,7 +3,8 @@ from discord.ext import commands
 
 OK = 0x89f442
 Error = 0xf4141
-ownerID = '274298631517896704' or '436294612521582603'
+ownerID = '274298631517896704'
+ownerID2 = '436294612521582603'
 
 class owner(): 
     def __init__(self, bot):
@@ -15,7 +16,7 @@ class owner():
         extension_name = extension_name.strip()
         if "cogs." not in extension_name:
             extension_name = "cogs." + extension_name # nico load Owner => nico load cogs.Owner
-            if ctx.message.author.id in ownerID:
+            if ctx.message.author.id in ownerID or ownerID2:
                 try:
                     self.bot.load_extension(extension_name)
                     embed = discord.Embed(title=none, description=None, color=OK)
@@ -37,7 +38,7 @@ class owner():
         extension_name = extension_name.strip()
         if "cogs." not in extension_name:
             extension_name = "cogs." + extension_name # nico unload cogs.Owner
-            if ctx.message.author.id in ownerID:
+            if ctx.message.author.id in ownerID or ownerID2:
                 if "owner" in extension_name:
                     embed = discord.Embed(title=None, description=None, color=Error)
                     embed.add_field(name='Error', value=extension_name + " can't be unloaded.", inline=False)
