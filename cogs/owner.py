@@ -43,14 +43,14 @@ class manage():
                     embed.add_field(name='Error', value=extension_name + " can't be unloaded.", inline=False)
                     await self.bot.say(embed=embed) # This obviously stops cogs.Owner from being disabled.
                 else:
-                     self.bot.unload_extension(extension_name)
-                     embed = discord.Embed(title=None, description=None, color=OK)
-                     embed.add_field(name=extension_name, value="Cog unloaded.")
-                     await self.bot.say(embed=embed)
-             else:
-                 noperm = discord.Embed(title=None, description=None, color=Error)
-                 noperm.add_field(name='Error', value='Are you sure you have enough permission to unload' + extension_name, inline=True)
-                 await self.bot.say(embed=noperm)
+                    self.bot.unload_extension(extension_name)
+                    embed = discord.Embed(title=None, description=None, color=OK)
+                    embed.add_field(name=extension_name, value="Cog unloaded.")
+                    await self.bot.say(embed=embed)
+            else:
+                noperm = discord.Embed(title=None, description=None, color=Error)
+                noperm.add_field(name='Error', value='Are you sure you have enough permission to unload' + extension_name, inline=True)
+                await self.bot.say(embed=noperm)
 
 
 
