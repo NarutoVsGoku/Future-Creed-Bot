@@ -54,5 +54,5 @@ class manage():
 
 
 
-    def setup(bot):
-        bot.add_cog(owner(bot))
+def setup(bot):
+    bot.add_cog(owner(bot))
