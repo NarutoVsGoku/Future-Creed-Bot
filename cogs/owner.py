@@ -20,7 +20,7 @@ class owner():
                 try:
                     self.bot.load_extension(extension_name)
                     embed = discord.Embed(title=None, description=None, color=OK)
-                    embed.add_field(name=extension, value="Cog loaded.")
+                    embed.add_field(name=extension_name, value="Cog loaded.")
                     await self.bot.say(embed=embed)
                 except (AttributeError, ImportError) as e:
                     embedError = discord.Embed(title=None, description=None, color=Error)
