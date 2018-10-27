@@ -5,7 +5,7 @@ OK = 0x89f442
 Error = 0xf4141
 ownerID = '274298631517896704'
 
-class manage(): 
+class owner(): 
     def __init__(self, bot):
         self.bot = bot
         
