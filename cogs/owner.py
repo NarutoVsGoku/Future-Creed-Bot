@@ -3,10 +3,7 @@ from discord.ext import commands
 
 OK = 0x89f442
 Error = 0xf4141
-ownerID = [
-    '274298631517896704'
-    '436294612521582603'
-]
+ownerID = '274298631517896704' and '436294612521582603'
 
 class owner(): 
     def __init__(self, bot):
