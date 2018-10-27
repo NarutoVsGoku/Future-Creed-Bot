@@ -38,7 +38,7 @@ class manage():
         if "cogs." not in extension_name:
             extension_name = "cogs." = extension_name # nico unload cogs.Owner
             if ctx.message.author.id in ownerID:
-                if "Owner" in extension_name:
+                if "owner" in extension_name:
                     embed = discord.Embed(title=None, description=None, color=Error)
                     embed.add_field(name='Error', value=extension_name + " can't be unloaded.", inline=False)
                     await self.bot.say(embed=embed) # This obviously stops cogs.Owner from being disabled.
