@@ -13,7 +13,7 @@ class manage():
     async def load(self, ctx, extension_name : str):
         """Loads an extension."""
         extension_name = extension_name.strip()
-        if "cogs." not in extension name:
+        if "cogs." not in extension_name:
             extension_name = "cogs." + extension_name # nico load Owner => nico load cogs.Owner
             if ctx.message.author.id in ownerID:
                 try:
@@ -32,10 +32,10 @@ class manage():
                  await self.bot.say(embed=noperm)
                      
     @commands.command(pass_context=True)
-    async def load(self, ctx, extension_name : str):
+    async def unload(self, ctx, extension_name : str):
         """Unloads an extension"""
         extension_name = extension_name.strip()
-        if "cogs." not in extension name:
+        if "cogs." not in extension_name:
             extension_name = "cogs." = extension_name # nico unload cogs.Owner
             if ctx.message.author.id in ownerID:
                 if "Owner" in extension_name:
