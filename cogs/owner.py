@@ -19,7 +19,7 @@ class owner():
             if ctx.message.author.id in ownerID or ownerID2:
                 try:
                     self.bot.load_extension(extension_name)
-                    embed = discord.Embed(title=none, description=None, color=OK)
+                    embed = discord.Embed(title=None, description=None, color=OK)
                     embed.add_field(name=extension, value="Cog loaded.")
                     await self.bot.say(embed=embed)
                 except (AttributeError, ImportError) as e:
