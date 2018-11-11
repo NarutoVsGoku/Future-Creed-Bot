@@ -71,17 +71,7 @@ async def playing(ctx, *args):
     await bot.change_presence(game=discord.Game(name= (mesg)))
     await bot.say("I am now playing" + mesg)
     
-@bot.event
-async def on ready():
-  print ("Ready when you are xd")
-  print ("I am running on " + bot.user.name)
-  print ("With the ID: " + bot.user.id)
-  
-@bot.command(pass_context=True)
-async def ping(ctx):
-  await bot.say("ping_pong: ping!! xSSS"
-  print ("user has pinged")
-                
+
 
   
   
