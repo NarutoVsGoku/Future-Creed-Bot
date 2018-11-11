@@ -63,7 +63,13 @@ async def say(ctx, *args):
       await asyncio.sleep(1)
       await bot.say(mesg)
       print (ctx.message.author.id + " or " + ctx.message.author.name + " made me say'{}'".format(mesg))
-
+      
+@bot.command(pass_context=True)
+async def playing(ctx, *args):
+  if ctx.message.author.id in OwnerID:
+    mesg = ''.join(args)
+    await bot.change_presence(game=discord.Game(name= (mesg)))
+    await bot.say("I am now playing" + mesg)
 
         
         
