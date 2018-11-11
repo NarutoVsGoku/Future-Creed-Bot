@@ -82,7 +82,7 @@ async def ping(ctx):
   await bot.say("ping_pong: ping!! xSSS"
   print ("user has pinged")
                 
-@bot.command(pass(context=True)
+@bot.command(pass_context=True)
 async def info(ctx, user: discord.Member):
      await bot.say("The users name is: {}".format(user.name))       
      await bot.say("The users ID is: {}".format(user.id))
