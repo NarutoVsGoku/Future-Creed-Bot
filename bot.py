@@ -78,7 +78,7 @@ async def on_ready():
     print(bot.user.id)
     print('------')
     
-   @bot.command(pass_context=True)
+@bot.command(pass_context=True)
 async def ping(ctx):
         channel = ctx.message.channel
         t1 = time.perf_counter()
