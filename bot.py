@@ -74,12 +74,12 @@ async def playing(ctx, *args):
 @bot.command(pass_context=True)
 async def ping(ctx):
   ""Pong!""
-await delete_message(ctx.message)
-before = time.monotonic()
-message = await bot.send("Pong!")
-ping = (time.monotonic() - before) * 1000
-await message.edit(content=f"Pong! {int(ping)}ms")
-print(f'ping {int(ping)}ms')
+  await delete_message(ctx.message)
+  before = time.monotonic()
+  message = await bot.send("Pong!")
+  ping = (time.monotonic() - before) * 1000
+  await message.edit(content=f"Pong! {int(ping)}ms")
+  print(f'ping {int(ping)}ms')
 
 
   
