@@ -78,15 +78,14 @@ async def on_ready():
     print(bot.user.id)
     print('------')
     
-   
-@bot.command(pass_context=True)
+   @bot.command(pass_context=True)
 async def ping(ctx):
-     channel = ctx.message.channel
-     t1 = time.perf_counter()
-      await bot.send_typing(channel)
-     t2 = time.perf_counter()
-     embed=discord.Embed(title=None, description='Ping: {}'.format(round((t2-t1)*1000)), color=0x2874A6)
-      await bot.say(embed=embed)
+        channel = ctx.message.channel
+        t1 = time.perf_counter()
+        await bot.send_typing(channel)
+        t2 = time.perf_counter()
+         embed=discord.Embed(title=None, description='Ping: {}'.format(round((t2-t1)*1000)), color=0x2874A6)
+         await bot.say(embed=embed)
 
 
 
