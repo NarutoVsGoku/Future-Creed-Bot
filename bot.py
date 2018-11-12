@@ -71,7 +71,15 @@ async def playing(ctx, *args):
     await bot.change_presence(game=discord.Game(name= (mesg)))
     await bot.say("I am now playing" + mesg)
 
-
+@bot.command(pass_context=True)
+async def ping(ctx):
+  ""Pong!""
+await delete_message(ctx.message)
+before = time.monotonic()
+message = await bot.send("Pong!")
+ping = (time.monotonic() - before) * 1000
+await message.edit(content=f"Pong! {int(ping)}ms")
+print(f'ping {int(ping)}ms')
 
 
   
