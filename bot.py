@@ -67,7 +67,7 @@ async def say(ctx, *args):
 @bot.command(pass_context=True)
 async def playing(ctx, *args):
   if ctx.message.author.id in ownerID:
-    mesg = ''.join(args)
+    mesg = ' '.join(args)
     await bot.change_presence(game=discord.Game(name= (mesg)))
     await bot.say("I am now playing" + mesg)
   
