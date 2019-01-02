@@ -77,7 +77,7 @@ async def ping(ctx):
   await bot.delete_message(ctx.message)
   await bot.say('pong')
 
-@bot.command(pass_context=True
+@bot.command(pass_context=True)
 async def secretmesg(ctx, *args):
   if ctx.message.author.id in OwnerID:
     mesg = ''.join(args)
