@@ -118,7 +118,11 @@ async def cmds(ctx):
   
   await bot.say(embed=embed)
   
-  
+@bot.command(pass_context+True)
+async def invite(ctx):
+  """Invite Me"""
+  await bot.say("here's my invite link")
+  await bot.say("https://discordapp.com/api/oauth2/authorize?client_id=505141797375442944&permissions=0&scope=bot")
   
   
   
