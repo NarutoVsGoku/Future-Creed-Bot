@@ -83,6 +83,40 @@ async def secretmesg(ctx, *args):
   if ctx.message.author.id in ownerID:
     mesg = ' '.join(args)
     await bot.send_message(discord.Object(id='528295857389305858'), mesg)
+    
+@bot.command(pass_context=True)
+async def help(ctx):
+  embed = discord.Embed(name='help', description=None, color=0x0000b3)
+  embed.set_author(name=ctx.message.author.name).
+  embed.add_field(name='Owner', value='not finished', inline=False)
+  embed.add_field(name='Cmds', value='List of commands (so far)', inline=False)
+  
+  await bot.say(embed=embed)
+  
+@bot.command(pass_context=True)
+async def owner(ctx):
+  if ctx.message.author.id in ownerID:
+    embed = discord.Embed(name='owner commands', description=None, color=0x0000b3)
+    embed.set_author(name=ctx.message.author.name)
+    embed.add_field(name='playing', value='Sets my playing status.', inline=False)
+    embed.add_field(name='secretmesg', value='Sends a secret message.', inline=False)
+  
+    await bot.say(embed=embed)
+  else:
+    embed =discord.Embed(name='Error', description=None, color=0xff0000)
+    embed.set_author(name=ctx.message.author.name)
+    emved.add_field(name='Permission Error', value='Are you sure you have permission to use this command?', inline=False)
+    
+    await bot.say(embed=embed)
+  
+@bot.command(pass_context=True)
+async def cmds(ctx):
+  embed = discord.Embed(name='cmds', description=None, color=0x0000b3)
+  embed.set_author(name=ctx.message.author.name)
+  embed.add_field(name='say', value='Says your message', inline=False)
+  embed.add_field(name='ping', value='Replies pong', inline=False)
+  
+  await bot.say(embed=embed)
   
   
   
