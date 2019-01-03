@@ -46,7 +46,7 @@ async def on_member_leave(member):
 
 @bot.command(pass_context=True)
 async def say(ctx, *args):
-  """Makeme say your message"""
+  """Make me say your message"""
   if ctx.message.author.id in ownerID:
       channel = ctx.message.channel
       mesg = ' '.join(args)
