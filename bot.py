@@ -105,7 +105,7 @@ async def owner(ctx):
   else:
     embed =discord.Embed(name='Error', description=None, color=0xff0000)
     embed.set_author(name=ctx.message.author.name)
-    emved.add_field(name='Permission Error', value='Are you sure you have permission to use this command?', inline=False)
+    embed.add_field(name='Permission Error', value='Are you sure you have permission to use this command?', inline=False)
     
     await bot.say(embed=embed)
   
