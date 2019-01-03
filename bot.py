@@ -118,7 +118,7 @@ async def cmds(ctx):
   
   await bot.say(embed=embed)
   
-@bot.command(pass_context+True)
+@bot.command(pass_context=True)
 async def invite(ctx):
   """Invite Me"""
   await bot.say("here's my invite link")
