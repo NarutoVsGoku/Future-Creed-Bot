@@ -87,7 +87,7 @@ async def secretmesg(ctx, *args):
 @bot.command(pass_context=True)
 async def help(ctx):
   embed = discord.Embed(name='help', description=None, color=0x0000b3)
-  embed.set_author(name=ctx.message.author.name).
+  embed.set_author(name=ctx.message.author.name)
   embed.add_field(name='Owner', value='not finished', inline=False)
   embed.add_field(name='Cmds', value='List of commands (so far)', inline=False)
   
