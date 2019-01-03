@@ -11,6 +11,7 @@ startup_extensions = [
 ]
 
 bot = commands.Bot(command_prefix='f!')
+bot.remove_command('help')
 ownerID = "405266248314781696"
 
 if __name__ == "__main__":
