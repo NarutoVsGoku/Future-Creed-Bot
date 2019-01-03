@@ -123,7 +123,7 @@ async def cmds(ctx):
 async def invite(ctx):
   """Invite Me"""
   await bot.say("here's my invite link")
-  await bot.say("https://discordapp.com/api/oauth2/authorize?client_id=505141797375442944&permissions=0&scope=bot")
+  await bot.say(f"https://discordapp.com/api/oauth2/authorize?client_id={bot.user.id}&permissions=8&scope=bot")
   
   
   
