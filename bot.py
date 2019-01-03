@@ -115,7 +115,7 @@ async def cmds(ctx):
   embed.set_author(name=ctx.message.author.name)
   embed.add_field(name='say', value='Says your message', inline=False)
   embed.add_field(name='ping', value='Replies pong', inline=False)
-  embed.add_fieled(name='invite', value='Replies a bot invite', inline=False)
+  embed.add_field(name='invite', value='Replies a bot invite', inline=False)
   
   await bot.say(embed=embed)
   
