@@ -125,6 +125,16 @@ async def invite(ctx):
   await bot.say("here's my invite link")
   await bot.say(f"https://discordapp.com/api/oauth2/authorize?client_id={bot.user.id}&permissions=8&scope=bot")
   
+@bot.command(pass_context=True)
+async def join(ctx):
+  channel = ctx.message.author.voice_channel
+  await bot.join_voice_channel(channel)
+  
+@bot.command(pass_context=True)
+async def leave(ctx):
+  server = ctx.message.server
+  voice_client = bot.voice_client_in(server)
+  await voice_client.disconnect()
   
   
   
