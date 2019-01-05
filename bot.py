@@ -130,6 +130,11 @@ async def join(ctx):
   channel = ctx.message.author.voice_channel
   await bot.join_voice_channel(channel)
   
+@bot.command(pass_context=True)
+async def leave(ctx):
+  server = ctx.message.server
+  voice_client = bot.voice_client_in(server)
+  await voice_client.disconnect()
 
   
   
