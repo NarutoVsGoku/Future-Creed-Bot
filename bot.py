@@ -125,19 +125,6 @@ async def invite(ctx):
   await bot.say("here's my invite link")
   await bot.say(f"https://discordapp.com/api/oauth2/authorize?client_id={bot.user.id}&permissions=8&scope=bot")
   
-@bot.command(pass_context=True)
-async def prune(ctx, number, *args):
-  if ctx.message.author.id in ownerID:
-    channel = messages[0].channel
-    mesg = ' '.join(args)
-    mgs = [] #Empty list to put all the messages in the log
-    number = int(number) #Converting the amount of messages to delete to an integer 
-    async for x in bot.logs_from(ctx.message.channel, limit = number):
-        mgs.append(x)
-    await bot.delete_messages(mgs)
-    await asyncio.sleep(1)
-    await bot.say(channel, "I have deleted" + (mesg) + "messages")
-    await bot.delete_messages("I have deleted" + (mesg) + "messages")
   
 
 
