@@ -21,7 +21,16 @@ if __name__ == "__main__":
         except Exception as e:
             exc = '{}: {}'.format(type(e).__name__, e)
             print('Failed to load extension {}\n{}'.format(extension, exc))
+
             
+players = {}
+queues = {}
+
+def check_queue(id):
+  if queues[id] != []:
+    player = queues[id].pop(0)
+    players[id] = player
+    player.start()
 # To remove the help command and make your own help command
 #bot.remove_command('help')
 
