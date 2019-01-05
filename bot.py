@@ -133,7 +133,7 @@ async def join(ctx):
 @bot.command(pass_context=True)
 async def leave(ctx):
   channel = ctx.message.author.voice_channel
-  await.leave_voice_channel(channel)
+  await bot.leave_voice_channel(channel)
 
 
   
