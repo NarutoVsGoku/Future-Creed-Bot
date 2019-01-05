@@ -132,9 +132,9 @@ async def join(ctx):
   
 @bot.command(pass_context=True)
 async def leave(ctx):
-  server = ctx.message.server
-  voice_client = bot.voice_client_in(server)
-  await voice_client.disconnect()
+  channel = ctx.message.author.voice_channel
+  await.leave_voice_channel(channel)
+
 
   
   
