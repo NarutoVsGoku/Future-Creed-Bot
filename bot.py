@@ -84,7 +84,7 @@ async def ping(ctx):
 async def secretmesg(ctx, *args):
   if ctx.message.author.id in ownerID:
     mesg = ' '.join(args)
-    await bot.send_message(discord.Object(id='508332156859449397'), mesg)
+    await bot.send_message(discord.Object(id='541259959544053761'), mesg)
     
 @bot.command(pass_context=True)
 async def help(ctx):
