@@ -13,6 +13,7 @@ startup_extensions = [
 bot = commands.Bot(command_prefix='f!')
 bot.remove_command('help')
 ownerID = "405266248314781696"
+ownerID2 = "502562008420450305"
 
 if __name__ == "__main__":
     for extension in startup_extensions:
@@ -69,7 +70,7 @@ async def say(ctx, *args):
       
 @bot.command(pass_context=True)
 async def playing(ctx, *args):
-  if ctx.message.author.id in ownerID:
+  if ctx.message.author.id in ownerID and ownerID2:
     mesg = ' '.join(args)
     await bot.change_presence(game=discord.Game(name= (mesg)))
     await bot.say("I am now playing" + mesg)
@@ -82,7 +83,7 @@ async def ping(ctx):
 
 @bot.command(pass_context=True)
 async def secretmesg(ctx, *args):
-  if ctx.message.author.id in ownerID:
+  if ctx.message.author.id in ownerID and ownerID2:
     mesg = ' '.join(args)
     await bot.send_message(discord.Object(id='541259959544053761'), mesg)
     
@@ -97,7 +98,7 @@ async def help(ctx):
   
 @bot.command(pass_context=True)
 async def owner(ctx):
-  if ctx.message.author.id in ownerID:
+  if ctx.message.author.id in ownerID and ownerID2:
     embed = discord.Embed(name='owner commands', description=None, color=0x0000b3)
     embed.set_author(name=ctx.message.author.name)
     embed.add_field(name='playing', value='Sets my playing status.', inline=False)
