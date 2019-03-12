@@ -49,7 +49,7 @@ async def on_member_leave(member):
     await bot.send_message(server, fmt.format(member, server))
 
 @bot.command(pass_context=True)
-async def say(ctx, *args):
+async def say(self, ctx,*,args:commands.clean_content):
   """Make me say your message"""
   if ctx.message.author.id in ownerID:
       channel = ctx.message.channel
