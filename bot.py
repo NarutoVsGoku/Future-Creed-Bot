@@ -94,6 +94,7 @@ async def owner(ctx):
     embed.set_author(name=ctx.message.author.name)
     embed.add_field(name='playing', value='Sets my playing status.', inline=False)
     embed.add_field(name='secretmesg', value='Sends a secret message.', inline=False)
+    embed.add_field(name='say', value='Says your message', inline=False)
   
     await bot.say(embed=embed)
   else:
@@ -107,7 +108,6 @@ async def owner(ctx):
 async def cmds(ctx):
   embed = discord.Embed(name='cmds', description=None, color=0x0000b3)
   embed.set_author(name=ctx.message.author.name)
-  embed.add_field(name='say', value='Says your message', inline=False)
   embed.add_field(name='ping', value='Replies pong', inline=False)
   embed.add_field(name='invite', value='Replies a bot invite', inline=False)
   
