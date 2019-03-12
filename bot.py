@@ -51,7 +51,7 @@ async def on_member_leave(member):
 @bot.command(pass_context=True)
 async def say(ctx, *, args):
   """Make me say your message"""
-  if ctx.message.author.id in ownerID:
+  if ctx.message.author.id in ownerID or ownerID2:
       channel = ctx.message.channel
       await bot.delete_message(ctx.message)
       await bot.send_typing(channel)
