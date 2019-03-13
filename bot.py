@@ -119,7 +119,13 @@ async def invite(ctx):
   await bot.say("here's my invite link")
   await bot.say(f"https://discordapp.com/api/oauth2/authorize?client_id={bot.user.id}&permissions=8&scope=bot")
 
-
+@client.event
+async def on_message(message):
+    author =.author
+    if author == client.user:
+      return
+    if 'password' in message.content:
+        await client.send_message(author, 'Do not say password')
   
   
 
