@@ -129,7 +129,7 @@ async def botinfo(ctx):
     embed = discord.Embed(name='My Information', description=None, color=0x0000b3)
     embed.add_field(name='Version', value="using discord.py v" + discord.__version__, inline=False)
     embed.add_field(name='Developer', value='<@405266248314781696> and <@502562008420450305>', inline=False)
-    embed.add_field(name='How many commands?', value=f'{str(len(self.bot.commands))} commands', inline=False)
+    embed.add_field(name='How many commands?', value=f'{str(len(bot.commands))} commands', inline=False)
     await bot.say(embed=embed)
   
   
