@@ -85,6 +85,7 @@ async def help(ctx):
   embed.add_field(name='Owner', value='not finished', inline=False)
   embed.add_field(name='Cmds', value='List of commands (so far)', inline=False)
   
+  
   await bot.say(embed=embed)
   
 @bot.command(pass_context=True)
@@ -110,6 +111,7 @@ async def cmds(ctx):
   embed.set_author(name=ctx.message.author.name)
   embed.add_field(name='ping', value='Replies pong', inline=False)
   embed.add_field(name='invite', value='Replies a bot invite', inline=False)
+  embed.add_field(name='botinfo, value='Replies a bot info', inline=False)
   
   await bot.say(embed=embed)
   
