@@ -124,7 +124,7 @@ async def botinfo(ctx):
     """Information about this bot"""
     embed = discord.Embed(name='My Information', description=None, color=0x0000b3)
     embed.add_field(name='Version', value="using discord.py v" + discord.__version__)
-    embed.add_field(name='Developer', value='<@405266248314781696> and <@502562008420450305>'), inline=True)
+    embed.add_field(name='Developer', value='<@405266248314781696> and <@502562008420450305>')
     await bot.say(embed=embed)
   
   
