@@ -5,6 +5,7 @@ import asyncio
 import os
 import random
 import youtube_dl
+import time
 
 startup_extensions = [
   'cogs.message','cogs.owner'
@@ -67,10 +68,11 @@ async def playing(ctx, *args):
     await bot.say("I am now playing" + mesg)
   
 @bot.command(pass_context=True)
-async def ping(ctx):
-  """ Pong! """
-  await bot.delete_message(ctx.message)
-  await bot.say('pong')
+async def ping_ms(ctx):
+    t = await bot.say ('Pong!')
+    ms = (t.timestamp-ctx.message.timestamp).total_seconds() * 1000
+    await bot.edit_message(t, new_content='Pong! Took: {}ms'.format(int(ms)))
+    
 
 @bot.command(pass_context=True)
 async def secretmesg(ctx, *args):
