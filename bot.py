@@ -125,7 +125,7 @@ async def botinfo(ctx):
     embed = discord.Embed(title='My Information', description=None, color=0x0000b3)
     embed.add_field(name='Version', value="using discord.py v" + discord.__version__)
     embed.add_field(name'Developer', value=ownerID or ownerID2)
-    await ctx.send(embed=embed)
+    await bot.say(embed=embed)
   
   
 
