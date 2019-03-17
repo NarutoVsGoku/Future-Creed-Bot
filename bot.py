@@ -65,7 +65,9 @@ async def playing(ctx, *args):
   if ctx.message.author.id in ownerID or ownerID2:
     mesg = ' '.join(args)
     await bot.change_presence(game=discord.Game(name= (mesg)))
-    await bot.say("I am now playing" + mesg)
+    await bot.say("I am now playing " + mesg)
+    else:
+      bot.say("Are you sure you can use this command")
   
 @bot.command(pass_context=True)
 async def ping(ctx):
