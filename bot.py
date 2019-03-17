@@ -123,7 +123,7 @@ async def invite(ctx):
 async def botinfo(ctx):
     """Information about this bot"""
     embed = discord.Embed(title='My Information', description=None, color=0x0000b3)
-    embed.add_field(name='Version', value=loadconfig.__Version__)
+    embed.add_field(name='Version', value="using discord.py v" + discord.__version__)
     embed.add_field(name'Developer', value=ownerID or ownerID2)
     await ctx.send(embed=embed)
   
