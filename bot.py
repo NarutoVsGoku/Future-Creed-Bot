@@ -119,7 +119,14 @@ async def invite(ctx):
   await bot.say("here's my invite link")
   await bot.say(f"https://discordapp.com/api/oauth2/authorize?client_id={bot.user.id}&permissions=8&scope=bot")
 
-
+@bot.command(pass_context=True)
+async def botinfo(ctx):
+    """Information about this bot"""
+    embed = discord.Embed(title='My Information', description=None, color=0x0000b3)
+    embed.add_field(name='Version', value=loadconfig.__Version__)
+    embed.add_field(name'Developer', value=f'<@loadconfig.ownerID}>')
+    embed.add_field(name'How many cmds?', value=f'{str(len(self.bot.commads))} commands')
+    await ctx.send(embed=embed)
   
   
 
