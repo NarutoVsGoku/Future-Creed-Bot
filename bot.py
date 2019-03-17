@@ -111,7 +111,7 @@ async def owner(ctx):
 async def cmds(ctx):
   embed = discord.Embed(name='cmds', description=None, color=0x0000b3)
   embed.set_author(name=ctx.message.author.name)
-  embed.add_field(name='ping', value='Replies pong (Not Accurate)', inline=False)
+  embed.add_field(name='ping', value='Replies pong (not accurate)', inline=False)
   embed.add_field(name='invite', value='Replies a bot invite', inline=False)
   embed.add_field(name='botinfo', value='Replies a bot info', inline=False)
   
