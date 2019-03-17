@@ -124,8 +124,7 @@ async def botinfo(ctx):
     """Information about this bot"""
     embed = discord.Embed(title='My Information', description=None, color=0x0000b3)
     embed.add_field(name='Version', value=loadconfig.__Version__)
-    embed.add_field(name'Developer', value=f'<@loadconfig.ownerID}>')
-    embed.add_field(name'How many cmds?', value=f'{str(len(self.bot.commads))} commands')
+    embed.add_field(name'Developer', value=ownerID or ownerID2)
     await ctx.send(embed=embed)
   
   
