@@ -66,8 +66,8 @@ async def playing(ctx, *args):
     mesg = ' '.join(args)
     await bot.change_presence(game=discord.Game(name= (mesg)))
     await bot.say("I am now playing " + mesg)
-    else:
-      bot.say("Are you sure you can use this command")
+  else:
+    bot.say("Are you sure you can use this command")
   
 @bot.command(pass_context=True)
 async def ping(ctx):
