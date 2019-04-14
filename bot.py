@@ -136,11 +136,11 @@ async def botinfo(ctx):
     
 @bot.command(pass_context=True)
 async def serverlist(ctx):
-  servers = list(self.bot.guils)
+  servers = list(bot.guilds)
   for x in range(len(servers)):
-      await ctx.author.send(f'name: {servers[x-1].name}\nID: {servers[x-1].id}')
+      await bot.say(f'name: {servers[x-1].name}\nID: {servers[x-1].id}')
   if ctx.message.guild:
-      await ctx.send('The list has been send to your DMs!')
+      await bot.say('The list has been send to your DMs!')
   if not ctx.message.guild:
       return
      
