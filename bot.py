@@ -134,15 +134,7 @@ async def botinfo(ctx):
     embed.add_field(name='How many commands?', value=f'{str(len(bot.commands))} commands', inline=False)
     await bot.say(embed=embed)
     
-@bot.command(pass_context=True)
-async def serverlist(ctx):
-  servers = list(bot.guilds)
-  for x in range(len(servers)):
-      await bot.send_message(f'name: {servers[x-1].name}\nID: {servers[x-1].id}')
-  if ctx.message.guild:
-      await bot.say('The list has been send to your DMs!')
-  if not ctx.message.guild:
-      return
+
      
   
   
