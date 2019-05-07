@@ -134,11 +134,7 @@ async def botinfo(ctx):
     embed.add_field(name='How many commands?', value=f'{str(len(bot.commands))} commands', inline=False)
     await bot.say(embed=embed)
     
-    @bot.command(pass_context+True)
-    async def join(ctx):
-      """Joins a voice channel"""
-      channel = ctx.message.author.voice_channel
-      await client.join_voice_channel(channel)
+    
     
 
      
